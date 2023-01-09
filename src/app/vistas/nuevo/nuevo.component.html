@@ -1,0 +1,28 @@
+<div class="container">
+    <br><br>
+    <h3>Register Products</h3><br>
+    <button type="submit" class="btn btn-dark" (click)="regresar()">Back</button>
+    <br><br>
+    <form [formGroup]="newProduct" (ngSubmit)="postForm(newProduct.value)">
+        <div class="form-group">
+            <label for="">Name</label>
+            <input type="text" class="form-control" placeholder="Name" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label for="">Category</label>
+            <input type="text" class="form-control" placeholder="Category" formControlName="category">
+        </div>
+        <div class="form-group row">
+            <div class="col">
+                <label for="">Brand</label>
+                <input type="text" class="form-control" placeholder="Brand" formControlName="brand">    
+            </div>
+            <div class="col">
+                <label for="">Slug</label>
+                <input type="text" class="form-control" placeholder="Slug" formControlName="slug">    
+            </div>
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
